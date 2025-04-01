@@ -1,4 +1,4 @@
-# ShulkerStacking-OG
+# ShulkerStacking
 Allow empty shulker boxes to stack like normal items. Not currently complete, but is in a usable state.
 
 Current Target: Purpur 1.19.4
