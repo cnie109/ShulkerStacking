@@ -1,6 +1,6 @@
 package me.barny1094875.shulkerstackingog.Listeners;
 
-import me.barny1094875.shulkerstackingog.ShulkerStacking_OG;
+import me.barny1094875.shulkerstackingog.ShulkerStacking;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -64,7 +64,7 @@ public class ShulkerBoxHopperHandler implements Listener
                     }
 
                     destinationItem.setAmount(destinationItem.getAmount() + 1);
-                    Bukkit.getScheduler().runTaskLater(ShulkerStacking_OG.getPlugin(), () -> {
+                    Bukkit.getScheduler().runTaskLater(ShulkerStacking.getPlugin(), () -> {
                         eventItem.setAmount(eventItem.getAmount() - 1);
                     }, 1);
                     return;
@@ -73,7 +73,7 @@ public class ShulkerBoxHopperHandler implements Listener
 
             // if no shulker box was found, try to put it in the first empty slot
             if(eventDestination.addItem(eventItem).isEmpty()){
-                Bukkit.getScheduler().runTaskLater(ShulkerStacking_OG.getPlugin(), () -> {
+                Bukkit.getScheduler().runTaskLater(ShulkerStacking.getPlugin(), () -> {
                     eventItem.setAmount(eventItem.getAmount() - 1);
                 }, 1);
             }

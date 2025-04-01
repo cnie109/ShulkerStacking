@@ -1,5 +1,5 @@
-name: ShulkerStacking-OG
+name: ShulkerStacking
 version: '${version}'
-main: me.barny1094875.shulkerstackingog.ShulkerStacking_OG
+main: me.barny1094875.shulkerstackingog.ShulkerStacking
 api-version: 1.19
 authors: [Barny1094875]

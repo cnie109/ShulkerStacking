@@ -6,10 +6,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.UUID;
 
-public final class ShulkerStacking_OG extends JavaPlugin
+public final class ShulkerStacking extends JavaPlugin
 {
 
-    private static ShulkerStacking_OG plugin;
+    private static ShulkerStacking
+ plugin;
 
     // used to prevent dupe glitches from inventory drag events
     public static HashMap<UUID, Boolean> isInventoryClosed = new HashMap<>();
@@ -26,7 +27,7 @@ public final class ShulkerStacking_OG extends JavaPlugin
         getServer().getPluginManager().registerEvents(new ShulkerBoxHopperHandler(), this);
     }
 
-    public static ShulkerStacking_OG getPlugin()
+    public static ShulkerStacking getPlugin()
     {
         return plugin;
     }

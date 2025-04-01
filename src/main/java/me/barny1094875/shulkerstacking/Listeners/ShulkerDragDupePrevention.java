@@ -1,6 +1,6 @@
 package me.barny1094875.shulkerstackingog.Listeners;
 
-import me.barny1094875.shulkerstackingog.ShulkerStacking_OG;
+import me.barny1094875.shulkerstackingog.ShulkerStacking;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -13,8 +13,8 @@ public class ShulkerDragDupePrevention implements Listener
     @EventHandler(priority = EventPriority.LOWEST)
     public void shulkerDragDupePrevent(InventoryCloseEvent event)
     {
-        ShulkerStacking_OG.isInventoryClosed.put(event.getPlayer().getUniqueId(), true);
-        Bukkit.getScheduler().runTaskLater(ShulkerStacking_OG.getPlugin(),
-                () -> ShulkerStacking_OG.isInventoryClosed.put(event.getPlayer().getUniqueId(), false), 2);
+        ShulkerStacking.isInventoryClosed.put(event.getPlayer().getUniqueId(), true);
+        Bukkit.getScheduler().runTaskLater(ShulkerStacking.getPlugin(),
+                () -> ShulkerStacking.isInventoryClosed.put(event.getPlayer().getUniqueId(), false), 2);
     }
 }

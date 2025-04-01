@@ -1,6 +1,6 @@
 package me.barny1094875.shulkerstackingog.Listeners;
 
-import me.barny1094875.shulkerstackingog.ShulkerStacking_OG;
+import me.barny1094875.shulkerstackingog.ShulkerStacking;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -28,11 +28,11 @@ public class ShulkerDragHandler implements Listener
         // disable default behavior
         event.setCancelled(true);
 
-        Bukkit.getScheduler().runTask(ShulkerStacking_OG.getPlugin(), () ->
+        Bukkit.getScheduler().runTask(ShulkerStacking.getPlugin(), () ->
         {
             // check if the inventory was closed in the last tick
             // this prevents a dupe glitch from occurring
-            if (ShulkerStacking_OG.isInventoryClosed.get(event.getWhoClicked().getUniqueId()))
+            if (ShulkerStacking.isInventoryClosed.get(event.getWhoClicked().getUniqueId()))
             {
                 return;
             }
